@@ -1,5 +1,5 @@
 {
-  "name": "empty-project-template",
+  "name": "radius-mobile",
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
@@ -9,13 +9,19 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "expo": "^31.0.2",
     "express": "^4.16.4",
     "faker": "^4.1.0",
     "moment": "^2.22.2",
     "mongoose": "^5.3.12",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-modal": "^7.0.0",
+    "react-native-paper": "^2.2.4",
+    "react-navigation": "^2.18.2",
+    "react-navigation-material-bottom-tabs": "^0.4.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
