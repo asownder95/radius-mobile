@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoUrl = 'mongodb://localhost/radius';
+const mongoUrl = 'mongodb://localhost/radius-mobile';
 
 mongoose.connect(mongoUrl);
 
