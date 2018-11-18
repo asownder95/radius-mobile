@@ -8,6 +8,7 @@ import axios from 'axios';
 import ListScreen from './client/screens/ListScreen';
 import MapScreen from './client/screens/MapScreen';
 import FavoritesScreen from './client/screens/FavoritesScreen';
+import SettingsScreen from './client/screens/SettingsScreen';
 import Header from './client/components/Header';
 
 export default class App extends Component {
@@ -83,6 +84,13 @@ export default class App extends Component {
           tabBarColor: '#00cc99',
         }
       },
+      Settings: {
+        screen: SettingsScreen,
+        navigationOptions: {
+          tabBarIcon: ({ focused, tintColor }) => (<Ionicons name="md-settings" size={22} style={{color: 'white'}} />),
+          tabBarColor: '#ff9933',
+        }
+      }
     });
     
     const RootStack = createStackNavigator({
