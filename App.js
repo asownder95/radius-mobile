@@ -7,6 +7,7 @@ import { Constants, Location, Permissions } from 'expo';
 import axios from 'axios';
 import ListScreen from './client/screens/ListScreen';
 import MapScreen from './client/screens/MapScreen';
+import FavoritesScreen from './client/screens/FavoritesScreen';
 import Header from './client/components/Header';
 
 export default class App extends Component {
@@ -40,7 +41,7 @@ export default class App extends Component {
   
   getEventData(timestamp, lat, lng) {
     console.log('Entered the getEventData function!');    
-    axios(`http://10.3.15.138:3000/events?timestamp=${timestamp}&lat=${lat}&lng=${lng}`)
+    axios(`http://192.168.43.18:3000/events?timestamp=${timestamp}&lat=${lat}&lng=${lng}`)
     .then(response => {
       this.setState({
         location: {
@@ -73,6 +74,13 @@ export default class App extends Component {
         navigationOptions: {
           tabBarIcon: ({ focused, tintColor }) => (<MaterialCommunityIcons name="map-marker-radius" size={24} style={{color: 'white'}} />),
           tabBarColor: '#2A68F6',
+        }
+      },
+      Favorites: {
+        screen: FavoritesScreen,
+        navigationOptions: {
+          tabBarIcon: ({ focused, tintColor }) => (<MaterialIcons name="favorite-border" size={22} style={{color: 'white'}} />),
+          tabBarColor: '#00cc99',
         }
       },
     });
